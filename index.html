@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gavirusandiptha නිල වෙබ් අඩවිය - සමාජ මාධ්‍ය, YouTube සහ තවත් දේ">
+    <title>Gavirusandiptha නිල වෙබ් අඩවිය</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E0249;
+            --secondary-color: #570A57;
+            --accent-color: #A91079;
+            --highlight-color: #F806CC;
+            --text-color: #333;
+            --light-bg: #f8f9fe;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #home {
+            background: linear-gradient(rgba(46, 2, 73, 0.8), rgba(87, 10, 87, 0.8)),
+                        url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .link-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .social-link i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            transition: color 0.3s;
+        }
+
+        .social-link:hover i {
+            color: var(--highlight-color);
+        }
+
+        .social-link a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover a {
+            color: var(--accent-color);
+        }
+
+        #contact {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        .contact-form button {
+            background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(169, 16, 121, 0.4);
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .intro h1 {
+                font-size: 2rem;
+            }
+
+            .intro p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">මුල් පිටුව</a></li>
+                <li><a href="#about">අපි ගැන</a></li>
+                <li><a href="#links">සබැඳි</a></li>
+                <li><a href="#contact">සම්බන්ධ වන්න</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h1>Gavirusandiptha නිල වෙබ් අඩවියට සාදරයෙන් පිළිගනිමු</h1>
+            <p>අලුත්ම තොරතුරු සහ සමාජ මාධ්‍ය සබැඳි සඳහා ඔබේ එකම වේදිකාව</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>අපි ගැන</h2>
+        <p>Gavirusandiptha ගැන වැඩිදුර දැනගන්න. අපගේ නවතම යාවත්කාලීන කිරීම්, සංගීතය සහ අන්තර්ගතය සමඟ සම්බන්ධ වන්න.</p>
+    </section>
+
+    <section id="links">
+        <h2>වැදගත් සබැඳි</h2>
+        <div class="link-list">
+            <div class="social-link">
+                <i class="fas fa-globe"></i>
+                <p><a href="https://gavirusada.github.io/page21/" target="_blank">Calculator</a></p>
+            </div>
+            <div class="social-link">
+                <i class="fas fa-globe"></i>
+                <p><a href="https://gavirusada.github.io/page222/" target="_blank">Number System Converter</a></p>
+            </div>
+            <div class="social-link">
+                <i class="fab fa-tiktok"></i>
+                <p><a href="https://vm.tiktok.com/ZS6eRF6tv/" target="_blank">TikTok</a></p>
+            </div>
+            <div class="social-link">
+                <i class="fab fa-facebook"></i>
+                <p><a href="https://www.facebook.com/share/1PaXuhSutZ/" target="_blank">Facebook</a></p>
+            </div>
+            <div class="social-link">
+                <i class="fab fa-youtube"></i>
+                <p><a href="https://youtube.com/@gavirusandiptha_?si=Eg1jgEDlXMVFjAhs" target="_blank">YouTube</a></p>
+            </div>
+            <div class="social-link">
+                <i class="fas fa-radio"></i>
+                <p><a href="https://zeno.fm/radio/gavirusandipthaofficial/" target="_blank">Zeno.fm රේඩියෝව</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>සම්බන්ධ වන්න</h2>
+        <p>විමසීම් හෝ සහයෝගීතා සඳහා, අපගේ සමාජ මාධ්‍ය හෝ විද්‍යුත් තැපෑල හරහා සම්බන්ධ වන්න.</p>
+        <div class="contact-form">
+            <form action="mailto:gavirusandiptha8@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="ඔබේ නම" required>
+                <input type="email" name="email" placeholder="විද්‍යුත් තැපෑල" required>
+                <textarea name="message" placeholder="පණිවිඩය" rows="5" required></textarea>
+                <button type="submit">යවන්න</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gavirusandiptha. සියලුම හිමිකම් ඇවිරිණි.</p>
+    </footer>
+</body>
+</html>
